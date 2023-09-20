@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * *_strcatn - This function appends the src string to the dest string,
+ * *_strcat - This function appends the src string to the dest string,
  *    overwriting the terminating null byte (\0) at the end of dest
  * @dest: pointer to descripe the array
  * @src: pointer to descripe the array
