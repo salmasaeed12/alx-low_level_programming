@@ -8,13 +8,13 @@
  */
 char *_strchr(char *s, char c)
 {
-while (*s != '\0')
+int itr;
+for (itr = 0; s[itr] >= '\0' ; itr++)
 {
-if (*s == c)
+if (s[itr] == c)
 {
-return (s);
+return (s + itr);
 }
-s++;
 }
 return ('\0');
 }
