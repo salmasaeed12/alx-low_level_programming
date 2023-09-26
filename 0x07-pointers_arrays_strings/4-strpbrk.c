@@ -25,7 +25,6 @@ return (p);
 }
 jtr++;
 }
-}
 itr++;
 }
 return (0);
