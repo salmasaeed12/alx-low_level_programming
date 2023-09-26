@@ -10,16 +10,24 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-while (*s != '\0')
+int itr, jtr;
 {
-for (int i = 0; accept[i] != '\0'; i++)
+char *p;
+itr = 0;
+while (s[itr] != '\0')
 {
-if (*s == accept[i])
+jtr = 0;
+while (accept[jtr] != '\0')
 {
-return (s);
+if (accept[jtr] == s[itr])
+{
+p = &s[itr];
+return (p);
+}
+jtr++;
 }
 }
-s++;
+itr++;
 }
-return ('\0');
+return (0);
 }
