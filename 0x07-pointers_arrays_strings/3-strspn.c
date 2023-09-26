@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * *_strspn - Gets the length of a prefix substring.
+ * _strspn - Gets the length of a prefix substring.
  * @s: A pointer to the string to search.
  * @accept: A pointer to the string containing acceptable characters.
  * Return: The number of bytes in the initial segment of @s that consist
