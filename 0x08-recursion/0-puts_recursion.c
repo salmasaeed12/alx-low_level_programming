@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _puts_recursion - a function that prints a string, 
+ * _puts_recursion - a function that prints a string
  * @s: integer represent no. of iteration
  * Return: the value of the function
  */
