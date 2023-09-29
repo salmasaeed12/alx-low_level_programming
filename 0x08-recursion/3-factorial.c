@@ -6,7 +6,7 @@
  * Return: the result of factorial n
  */
 int factorial(int n)
-{ int fact = 0
+{ int fact = 0;
 if (n > 0)
 {
 fact = factorial(n - 1) * n;
