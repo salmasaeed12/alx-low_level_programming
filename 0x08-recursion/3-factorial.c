@@ -6,11 +6,10 @@
  * Return: the result of factorial n
  */
 int factorial(int n)
-{ int fact = 0;
+{
 if (n > 0)
 {
-fact = factorial(n - 1) * n;
-return (fact);
+return (factorial(n - 1) * n);
 }
 else if (n == 0)
 {
