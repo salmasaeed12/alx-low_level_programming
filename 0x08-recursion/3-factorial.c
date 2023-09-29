@@ -10,10 +10,14 @@ int factorial(int n)
 if (n > 0)
 {
 fact = factorial(n - 1) * n;
-}
 return (fact);
+}
 else if (n == 0)
+{
 return (1);
+{
 else
+{
 return (-1);
+}
 }
