@@ -34,6 +34,11 @@ return (0);
 else
 return (check(s, start + 1, end - 1, mod));
 }
+/**
+ *  is_palindrome - Checks if a string is a palindrome.
+ *  @s: The string to check.
+ *  Return: 1 if s is a palindrome, 0 otherwise.
+ */
 int is_palindrome(char *s)
 {
 int end = last_index(s);
