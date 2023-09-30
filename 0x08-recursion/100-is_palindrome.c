@@ -1,43 +1,29 @@
 #include "main.h"
-/**
- * is_palindrome - Checks if a string is a palindrome.
- * @s: The string to check.
- * Return: 1 if s is a palindrome, 0 otherwise.
- */
-/**
- * last_index - Calculates the last index of a string.
- * @s: The input string.
- * Return: The last index of the string.
- */
+#include <string.h>
 
 /**
- *  * check - Helper function to check if a substring is a palindrome.
- *   * @s: The input string.
- *    * @start: The start index of the substring.
- *     * @end: The end index of the substring.
- *      * @mod: A flag indicating whether the string length is even or odd.
- *       * Return: 1 if the substring is a palindrome, 0 otherwise.
- **/
-int is_palindrome(char *s);
-int check(char *s, int start, int end, int modd);
-int last_index(char *s)
+ *  * is_palindrome - Checks if a string is a palindrome.
+ *   * @s: The string to check.
+ *    * Return: 1 if s is a palindrome, 0 otherwise.
+ *     */
+int is_palindrome(char *s)
 {
-int n = 0;
-if (*s > '\0')
-n += last_index(s + 1) + 1;
-return (n);
+	    /* If the string is empty or has only one character, it is a palindrome. */
+	    if (*s == '\0' || *(s + 1) == '\0')
+		            return (1);
+
+	        /* Calculate the length of the string. */
+	        int len = strlen(s);
+
+		    /* Check if the first and last characters are the same. */
+		    if (*s != s[len - 1])
+			            return (0);
+
+		        /* Null-terminate the string after the last character. */
+		        s[len - 1] = '\0';
+
+			    /* Recursively check the substring between the first and last characters. */
+			    return (is_palindrome(s + 1));
 }
-int is_is_palindrome(char *s)
-{
-int end = last_index(s);
-return (check(s, 0, end - 1, end % 2));
-int check(char *s, int start, int end, int modd)
-{
-if ((start == end && mod != 0) || (start == end + 1 && mod == 0))
-return (1);
-else if (s[start] != s[end])
-return (0);
-else
-return (check(s, start + 1, end - 1, mod));
-}
+
 
