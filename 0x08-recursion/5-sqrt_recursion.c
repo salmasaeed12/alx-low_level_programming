@@ -1,63 +1,32 @@
 #include "main.h"
+
 /**
- * calculate_sqrt - Helper function for
- *         binary search-like square root calculation.
+ * _sqrt_recursion - Returns the natural square root of a non-negative number.
  * @n: The number for which to calculate the square root.
- * @start: The start of the search range.
- * @end: The end of the search range.
- * Return: The natural square root of the number, or -1 if it doesn't have one.
- */
-int calculate_sqrt(int n, int start, int end);
-/**
- * _sqrt_recursion - Calculates the natural square root of a number.
- * @n: The number for which to calculate the square root.
- * Return: The natural square root of the number, or -1 if it doesn't have one.
+ *
+ * Return: The resulting square root, or -1 if the number is negative.
  */
 int _sqrt_recursion(int n)
 {
 if (n < 0)
-{
 return (-1);
+return (actual_sqrt_recursion(n, 0));
 }
-else if (n == 0 || n == 1)
-{
-return (n);
-}
-else
-{
-return (calculate_sqrt(n, 1, n / 2));
-}
-}
+
 /**
- * calculate_sqrt - Helper function for binary
+ * actual_sqrt_recursion - Recursively calculates the natural square root
+ *                        of a non-negative number.
  * @n: The number for which to calculate the square root.
- * @start: The start of the search range.
- * @end: The end of the search range.
- *  Return: The natural square root of the number, or -1
+ * @i: An iterator to keep track of the current guess.
+ *
+ * Return: The resulting square root, or -1 if no natural square root exists.
  */
-int calculate_sqrt(int n, int start, int end)
+int actual_sqrt_recursion(int n, int i)
 {
-int mid = (start + end) / 2;
-long long mid_squared = (long long)mid * mid;
-if (start > end)
-{
+if (i * i > n)
 return (-1);
-}
-if (mid_squared == n)
-{
-return (mid);
-}
-if (mid_squared == n)
-{
-return (mid);
-}
-else if (mid_squared < n)
-{
-return (calculate_sqrt(n, mid + 1, end));
-}
-else
-{
-return (calculate_sqrt(n, start, mid - 1));
-}
+if (i * i == n)
+return (i);
+return (actual_sqrt_recursion(n, i + 1));
 }
 
