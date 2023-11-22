@@ -18,7 +18,7 @@ unsigned int x = 0;
 if (size == 0)
 return ('\0');
 ptr = malloc(sizeof(c) * size);
-if (*ptr == '\0')
+if (ptr == NULL)
 return ('\0');
 while (x < size)
 {
