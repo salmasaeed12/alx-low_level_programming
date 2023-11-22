@@ -21,9 +21,9 @@ if (ptr == NULL)
 return ('\0');
 while (i > m)
 {
-ptr[i] = str[i];
+ptr[m] = str[m];
 m++;
 }
-ptr[m] = '\0';
+ptr[i] = '\0';
 return (ptr);
 }
