@@ -22,7 +22,7 @@ while (i < argc)
 {
 m = atoi(argv[i]);
 
-if (m >= 0 && m <= 9)
+if (m >= 0 && m <= 1000000)
 {
 sum += m;
 i++;
@@ -31,6 +31,7 @@ else
 {
 printf("Error\n");
 return (1);
+break;
 }
 }
 }
