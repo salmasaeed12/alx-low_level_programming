@@ -15,7 +15,6 @@ char *ptr;
 int i = 0, m = 0, n = 0, l;
 if (s1 == NULL && s2 == NULL)
 {
-printf("\n");
 return ('\0');
 }
 while (s1[i] && s1 != NULL)
@@ -26,13 +25,13 @@ l = n + i;
 ptr = malloc((sizeof(char) * i)+(sizeof(char) * n)+1);
 if (ptr == NULL)
 return ('\0');
-while (i > m)
+while (i > m && s1 != NULL)
 {
 ptr[m] = s1[m];
 m++;
 }
 n = 0;
-while (l > m)
+while (l > m && s2 != NULL)
 {
 ptr[m] = s2[n];
 m++;
