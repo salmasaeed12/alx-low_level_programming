@@ -31,7 +31,7 @@ printf("0\n");
 return (0);
 }
 y = recur(x);
-printf("%d", y);
+printf("%d\n", y);
 return (0);
 }
 int recur(int m)
@@ -57,6 +57,7 @@ else if (m >= 2 && m < 5)
 n = m % 2;
 return ((m / 2) + recur(n));
 }
-else
+else if (m == 1)
 return (1);
+return (0);
 }
