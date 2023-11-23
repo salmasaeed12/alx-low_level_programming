@@ -17,6 +17,8 @@ if (s1 == NULL)
 i = 0;
 if (s2 == NULL)
 n = 0;
+if (s1 == NULL && s2 == NULL)
+return (NULL);
 while (s1[i])
 i++;
 while (s2[n])
