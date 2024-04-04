@@ -1,6 +1,16 @@
+.PHONY: all clean
 CC = gcc
-SRC = main.c holberton.c
+SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
-NAME = holberton
-all: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+NAME = school
+
+all: $(NAME)
+
+$(NAME) : $(OBJ)
+	$(CC) $^ -o $@
+
+%.o : %.c
+	$(CC) -c $< -o $@
+
+clean:
+	rm -f $(SRC) $(OBJ)

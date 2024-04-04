@@ -1,4 +1,8 @@
-CC = gcc
-SRC = main.c holberton.c
-all: $(SRC)
-	$(CC) $(SRC) -o holberton
+CC = gcc -Wall -Wextra
+SRC = main.c school.c
+
+all : school
+school: $(SRC)  main.h
+	$(CC) $(SRC) -o school
+clean :
+	rm -f school
